@@ -1,4 +1,4 @@
-# KirbyMinifyHTML
+# KirbyMinifyHtml
 
 ## What is it?
 
