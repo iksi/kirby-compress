@@ -1,14 +1,20 @@
 <?php
+
 /**
  * compress
  *
  * @author Iksi <info@iksi.cc>
  * @version 1.0.0
  */
+ 
+if (c::get('compress') !== true) return;
 
 function compress($string) {
+    
+    // test if we have an html/xml page:
+    if ( ! preg_match('/^<[\s\S]+>$/', trim($string))) return $string;
 
-    $string = '%# Collapse whitespace everywhere but in blacklisted elements.
+    $string = '%        # Collapse whitespace everywhere but in blacklisted elements.
         (?>             # Match all whitespans other than single space.
           [^\S ]\s*     # Either one [\t\r\n\f\v] and zero or more ws,
         | \s{2,}        # or two or more consecutive-any-whitespace.
