@@ -34,7 +34,7 @@ function compress($string) {
         )                       # If we made it here, we are not in a blacklist tag.
     %Six';
 
-    return preg_replace($pattern, '', string);
+    return preg_replace($pattern, '', $string);
 }
 
 ob_start('compress');
