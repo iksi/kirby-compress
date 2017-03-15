@@ -6,5 +6,6 @@ Compress Kirby’s output. It strips all whitespace between html tags but leaves
 
 Enable by setting `c::set('compress', true);` in your config.php file.
 
-## Author
-Iksi, <http://www.iksi.cc>
+## License
+
+[MIT](license.md)
