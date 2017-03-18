@@ -45,6 +45,9 @@ class Response extends \Kirby\Component\Response {
     } else if(is_a($response, 'Page')) {
       return $this->compress($this->kirby->render($response));
     } else if(is_a($response, 'Response')) {
+      if($response->format() === 'html') {
+        return $this->compress($response);
+      }
       return $response;
     } else {
       return null;
