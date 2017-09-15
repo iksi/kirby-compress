@@ -1,0 +1,8 @@
+{
+  "name": "kirby-compress",
+  "description": "Compress Kirby’s output. It strips all whitespace between html tags.",
+  "author": "Jurriaan <jurriaan@iksi.cc>",
+  "version": "0.1",
+  "type": "kirby-plugin",
+  "license": "MIT"
+}
