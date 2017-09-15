@@ -1,6 +1,6 @@
 <?php
 
-if(!c::get('compress')) return;
+if(!c::get('plugin.compress')) return;
 
 load(array(
   'iksi\\compress\\response' => __DIR__ . DS . 'lib' . DS . 'response.php'
