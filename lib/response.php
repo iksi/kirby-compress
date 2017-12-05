@@ -9,9 +9,9 @@ class Response extends \Kirby\Component\Response {
 
   public function compress($input) {
 
-    // Uses Alan Moore’s regular expression: 
+    // Uses Alan Moore’s regular expression:
     // http://stackoverflow.com/questions/5312349/minifying-final-html-output-using-regular-expressions-with-codeigniter
-    
+
     // Collapse whitespace everywhere but in blacklisted elements.
     $pattern = '%
       (?>             # Match all whitespans other than single space.
@@ -33,7 +33,7 @@ class Response extends \Kirby\Component\Response {
       )               # If we made it here, we are not in a blacklist tag.
     %Six';
 
-    return preg_replace($pattern, '', $input);
+    return preg_replace($pattern, ' ', $input);
   }
 
   public function make($response) {
